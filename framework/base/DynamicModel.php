@@ -10,7 +10,7 @@ namespace yii\base;
 use yii\validators\Validator;
 
 /**
- * DynamicModel is a model class primarily used to support ad hoc data validation.
+ * DynamicModel is a model class primarily used to support ad-hoc data validation.
  *
  * The typical usage of DynamicModel is as follows,
  *
@@ -57,11 +57,10 @@ class DynamicModel extends Model
 {
     private $_attributes = [];
 
-
     /**
-     * Constructors.
-     * @param array $attributes the dynamic attributes (name-value pairs, or names) being defined
-     * @param array $config the configuration array to be applied to this object.
+     * Constructor.
+     * @param array $attributes the dynamic attributes (name-value pairs or names) being defined
+     * @param array $config the configuration array to be applied to this object
      */
     public function __construct(array $attributes = [], $config = [])
     {
@@ -147,7 +146,7 @@ class DynamicModel extends Model
      * You can also directly manipulate [[validators]] to add or remove validation rules.
      * This method provides a shortcut.
      * @param string|array $attributes the attribute(s) to be validated by the rule
-     * @param mixed $validator the validator for the rule.This can be a built-in validator name,
+     * @param mixed $validator the validator for the rule. This can be a built-in validator name,
      * a method name of the model class, an anonymous function, or a validator class name.
      * @param array $options the options (name-value pairs) to be applied to the validator
      * @return static the model itself
@@ -167,7 +166,7 @@ class DynamicModel extends Model
      * @param array $data the data (name-value pairs) to be validated
      * @param array $rules the validation rules. Please refer to [[Model::rules()]] on the format of this parameter.
      * @return static the model instance that contains the data being validated
-     * @throws InvalidConfigException if a validation rule is not specified correctly.
+     * @throws InvalidConfigException if a validation rule is not specified correctly
      */
     public static function validateData(array $data, $rules = [])
     {
